@@ -11,12 +11,15 @@ const key = '1ccb732e-b55a-4404-ad3f-0f99c02fe44e'
 const namespace = 'fearless.tech'
 
 const App = () => {
-  const [fearlessCounter, setFearlessCounter] = useState(1)
+  const [fearlessCounter, setFearlessCounter] = useState()
 
+  // equivalent of component did mount
   useEffect(() => {
     getCount()
   }, [])
 
+  // I could use variables for 'hit' or 'get' actions as well,
+  // but the new fuction would serve two different purposes and be harder to read
   const getCount = () => {
     axios
       .get(`https://api.countapi.xyz/get/${namespace}/${key}`)

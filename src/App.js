@@ -7,8 +7,8 @@ import Button from './components/Button';
 import CountDisplay from './components/CountDisplay';
 
 // not a secret
-const key = '1ccb732e-b55a-4404-ad3f-0f99c02fe44e'
-const namespace = 'fearless.tech'
+export const key = '1ccb732e-b55a-4404-ad3f-0f99c02fe44e'
+export const namespace = 'fearless.tech'
 
 const App = () => {
   const [fearlessCounter, setFearlessCounter] = useState()
